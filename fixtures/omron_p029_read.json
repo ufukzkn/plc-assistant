@@ -1,0 +1,7 @@
+{
+  "source": "https://www.fa.omron.com.cn/upload/faqfiles/SPLC_CASE/%5BP029-2%5D%E9%80%9A%E8%BF%87%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E5%8F%91%E9%80%81HOSTLINK%EF%BC%88FINS%EF%BC%89%E5%91%BD%E4%BB%A4.pdf",
+  "description": "Omron P029-2 figures 3-4 and 3-5. FINS payload only, without the Host Link envelope.",
+  "command": "0101B00064000002",
+  "response": "0101000012345678",
+  "words": {"100": 4660, "101": 22136}
+}

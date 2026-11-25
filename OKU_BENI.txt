@@ -1,0 +1,16 @@
+PLC Assistant V4.0.2 – Salt okunur USB optimizasyonu
+
+1. ZIP içindeki klasörü tamamen çıkarın. BASLAT.bat dosyasını çalıştırın.
+2. CDM seçin, PLC programını oku ve listele butonuna basın.
+3. Blok okuma varsayılan olarak açıktır; bekleme 500 ms.
+4. Aynı ekranda aynı bekleme ayarıyla Blok okuma açık ve kapalı sürelerini karşılaştırın.
+   FINS: 18/29 tekil = bu örnekte 18 RawFINS çağrısı, eski tekil planda 29 çağrı.
+   Okuma: haberleşme ve çözümleme süresi. Örnek aralığı: ekran güncellemeleri arası süre.
+   Değerler eşzamanlı değildir. İlk örnek aralığı 0 olabilir.
+5. Blok cevabı geçersizse ilgili adresler tekil okunur. Tekil okumalar başarılıysa o bellek alanı oturum boyunca tekil kalır. Yeni USB oturumu açılırsa yeniden blok denenir.
+6. Bir zamanlayıcının PV değeri sadece o zamanlayıcı incelenirken ayrıca okunur.
+
+Blok sınırı: 16 eleman, komşu adresler arası en fazla 3 adres farkı. Sadece FINS 0101; yazma, force veya çalışma modu değişikliği yoktur.
+Test: python -m unittest -v test_block_read
+Referans BIN dosyası dağıtıma dahil değildir; ilgili test başka bilgisayarda atlanabilir.
+Windows/CX-Server Lite gerçek USB blok okuması saha testine tabidir. Süre garantisi yoktur.
