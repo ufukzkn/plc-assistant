@@ -4,6 +4,8 @@ Omron CJ2M için deneysel, salt okunur program inceleme ve arıza asistanı. Çe
 
 ## Windows kurulumu
 
+Windows Gezgini’nde repo klasöründeki **BASLAT.bat** dosyasına çift tıklayın. Başlatıcı önce repo içindeki `.venv` ortamını, ardından Windows Python başlatıcısını (`py -3`) veya sistemdeki `python` komutunu kullanır.
+
 - Git ve Python 3.10 veya üzeri gerekir. Python kurulumunda Tcl/Tk bileşenini etkin tutun.
 - Canlı USB okuması için Windows, Omron CX-Server Lite, Omron USB sürücüsü ve tek PLC içeren bir CDM dosyası gerekir. Mevcut PowerShell köprüsü 32 bit CX-Server Lite DLL'ini kullanır. DLL yolu `session.ps1` ve `bridge.ps1` içinde tanımlıdır.
 - Çevrimdışı BIN açma, öneriler ve sentetik testler için PLC bağlantısı gerekmez.
@@ -18,11 +20,10 @@ py -3 -m venv .venv
 .\.venv\Scripts\python.exe main.py
 ```
 
-Aynı repoyu daha önce klonladıysanız:
+Aynı repoyu daha önce klonladıysanız, repo klasöründe güncelleyin ve `BASLAT.bat` dosyasına çift tıklayın:
 
 ```powershell
 git pull --ff-only
-.\.venv\Scripts\python.exe main.py
 ```
 
 ## Türkçe soru önerileri
